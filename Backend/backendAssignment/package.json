@@ -2,15 +2,17 @@
   "name": "backendassignment",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/server.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
   "dependencies": {
+    "@prisma/client": "^7.4.2",
     "axios": "^1.13.6",
     "bcrypt": "^6.0.0",
     "bcryptjs": "^3.0.3",
@@ -22,5 +24,8 @@
     "pg": "^8.20.0",
     "pkg": "^5.8.1",
     "uuid": "^13.0.0"
+  },
+  "devDependencies": {
+    "prisma": "^7.4.2"
   }
 }

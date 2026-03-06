@@ -1,8 +1,8 @@
 import express from "express"
-import { pool } from "../db";
-import { hashedPassword } from "../utils/hash";
+import { pool } from "../db.js";
+import { hashedPassword } from "../utils/hash.js";
 import bcrypt from "bcryptjs";
-import { generateToken } from "../utils/jwt";
+import { generateToken } from "../utils/jwt.js";
 export const registerUser = async (req, res) => {
     try {
         const { first_name, last_name, email, mobile_number, password } = req.body;
