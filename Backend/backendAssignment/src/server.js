@@ -9,8 +9,10 @@ app.use(cors({
     origin:"*"
 }))
 app.use(express.json())
-app.use("api/auth",registerUser)
-
+app.use("/api/auth",registerUser)
+app.get("/", (req,res)=>{
+  res.send("Backend API Running")
+})
 app.listen(process.env.PORT || 4000,()=>{
     console.log(`server is running on ${process.env.PORT}`)
 })
